@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="MagoArab_HideMassActions::mass_action" title="Mass Actions Permissions">
+                    <resource id="MagoArab_HideMassActions::hold" title="Mass Action: Hold" />
+                    <resource id="MagoArab_HideMassActions::unhold" title="Mass Action: Unhold" />
+                    <resource id="MagoArab_HideMassActions::cancel" title="Mass Action: Cancel" />
+                    <resource id="MagoArab_HideMassActions::invoice" title="Mass Action: Invoice" />
+                    <resource id="MagoArab_HideMassActions::ship" title="Mass Action: Ship" />
+                    <resource id="MagoArab_HideMassActions::print" title="Mass Action: Print" />
+                    <resource id="MagoArab_HideMassActions::change_status" title="Mass Action: Change Status" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

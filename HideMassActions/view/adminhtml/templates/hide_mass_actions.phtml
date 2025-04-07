@@ -1,0 +1,29 @@
+<?php
+$auth = $block->getAuthorization();
+?>
+
+<style>
+    <?php if (!$auth->isAllowed('MagoArab_HideMassActions::hold')): ?>
+        li[data-label="Hold"], button[title="Hold"] { display: none !important; }
+    <?php endif; ?>
+
+    <?php if (!$auth->isAllowed('MagoArab_HideMassActions::unhold')): ?>
+        li[data-label="Unhold"], button[title="Unhold"] { display: none !important; }
+    <?php endif; ?>
+
+    <?php if (!$auth->isAllowed('MagoArab_HideMassActions::cancel')): ?>
+        li[data-label="Cancel"], button[title="Cancel"] { display: none !important; }
+    <?php endif; ?>
+
+    <?php if (!$auth->isAllowed('MagoArab_HideMassActions::invoice')): ?>
+        li[data-label="Invoice"], button[title="Invoice"] { display: none !important; }
+    <?php endif; ?>
+
+    <?php if (!$auth->isAllowed('MagoArab_HideMassActions::ship')): ?>
+        li[data-label="Ship"], button[title="Ship"] { display: none !important; }
+    <?php endif; ?>
+
+    <?php if (!$auth->isAllowed('MagoArab_HideMassActions::print')): ?>
+        li[data-label="Print"], button[title="Print"] { display: none !important; }
+    <?php endif; ?>
+</style>

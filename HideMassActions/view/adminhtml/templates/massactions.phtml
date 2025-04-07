@@ -1,0 +1,18 @@
+<?php
+/** @var \MagoArab\HideMassActions\Block\MassActions $block */
+$permissions = $block->getAclPermissions();
+?>
+
+<script>
+require(['jquery', 'mage/translate'], function ($) {
+    $(document).ready(function () {
+        var aclPermissions = <?php echo json_encode($permissions); ?>;
+        $('#sales_order_grid_massaction-select option').each(function () {
+            var action = $(this).val();
+            if (action && aclPermissions.indexOf(action) === -1) {
+                $(this).remove();
+            }
+        });
+    });
+});
+</script>
